@@ -16,6 +16,7 @@ export const NewProduct = () => {
   const [comment, setComment] = useState('');
 
   const onCreate = () =>{
+
     const product = {
       productID: Date.now(),
       name,
@@ -37,13 +38,13 @@ export const NewProduct = () => {
   return (
     <div className="form">
       <h2>Add Product</h2>
-      <input className="form__input" type="text" placeholder="Name" required onChange={(e) => setName(e.target.value)}/>
-      <input className="form__input" type="text" placeholder="ImageURL" onChange={(e) => setImageURL(e.target.value)}/>
-      <input className="form__input" type="number" min="0" placeholder="Count" required onChange={(e) => setCount(e.target.value)}/>
-      <input className="form__input" type="number" min="0" placeholder="Width"required onChange={(e) => setWidth(e.target.value)}/>
-      <input className="form__input" type="number" min="0" placeholder="Height"required onChange={(e) => setHeight(e.target.value)}/>
-      <input className="form__input" type="number" min="0" placeholder="Weight"required onChange={(e) => setWeight(e.target.value)}/>
-      <textarea className="form__input input-area" placeholder="Comment"  onChange={(e) => setComment(e.target.value)}/>
+      <input className="form__input" type="text" placeholder="Name" required onChange={(e) => setName(e.target.value)} value={name}/>
+      <input className="form__input" type="text" placeholder="ImageURL" required onChange={(e) => setImageURL(e.target.value)} value={imageURL}/>
+      <input className="form__input" type="number" min="0" placeholder="Count" required onChange={(e) => setCount(e.target.value)} value={count}/>
+      <input className="form__input" type="number" min="0" placeholder="Width"required onChange={(e) => setWidth(e.target.value)} value={width}/>
+      <input className="form__input" type="number" min="0" placeholder="Height"required onChange={(e) => setHeight(e.target.value)} value={height}/>
+      <input className="form__input" type="number" min="0" placeholder="Weight"required onChange={(e) => setWeight(e.target.value)} value={weight}/>
+      <textarea className="form__input input-area" placeholder="Comment" required  onChange={(e) => setComment(e.target.value)} value={comment}/>
       <div className="btn-wrap">
         <Link to={ROUTES.HOME}><Button onClick={onCreate} className="form__btn" color="success">Confirm</Button></Link>
         <Link to={ROUTES.HOME}><Button className="form__btn" color="danger">Cancel</Button></Link>
