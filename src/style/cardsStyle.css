@@ -1,0 +1,27 @@
+.product__card {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__body {
+  padding: 10px;
+}
+
+.card__title {
+  margin: 15px;
+}
+
+.card__item {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.card__btn {
+  margin: 5px;
+}
+
+.card-wrap {
+  display: flex;
+}
